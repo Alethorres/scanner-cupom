@@ -649,14 +649,12 @@ function openManual() {
 }
 
 function goHome() {
-    // Reset camera state
     imgB64 = null; imgMime = null;
     const zone = document.getElementById('uploadZone');
     zone.innerHTML = `<div class="upload-icon">📸</div><div class="upload-text">Toque para capturar</div><div class="upload-hint">Câmera ou galeria</div>`;
     zone.classList.remove('filled');
     document.getElementById('fileInput').value = '';
-    const btn = document.getElementById('btnAnalyze');
-    btn.disabled = true;
+    document.getElementById('btnAnalyze').disabled = true;
     show('s-home');
 }
 
@@ -686,8 +684,7 @@ function onFile(e) {
         const zone = document.getElementById('uploadZone');
         zone.innerHTML = `<img src="${url}" alt="Cupom">`;
         zone.classList.add('filled');
-        const btn = document.getElementById('btnAnalyze');
-        btn.disabled = false;
+        document.getElementById('btnAnalyze').disabled = false;
     };
     reader.readAsDataURL(file);
 }
@@ -701,7 +698,6 @@ async function analyzeImage() {
     try {
         let data;
         if (cfg.extract) {
-            // Via Make webhook
             const r = await fetch(cfg.extract, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -741,7 +737,8 @@ Se não encontrar um campo, use null.`;
         headers: {
             'Content-Type': 'application/json',
             'x-api-key': cfg.key,
-            'anthropic-version': '2023-06-01'
+            'anthropic-version': '2023-06-01',
+            'anthropic-dangerous-direct-browser-access': 'true'
         },
         body: JSON.stringify({
             model: 'claude-sonnet-4-20250514',
@@ -780,12 +777,12 @@ function fillReview(d) {
 async function saveData(src) {
     const p = src === 'review' ? 'r' : 'm';
     const tx = {
-        nome:          document.getElementById(`${p}-nome`).value.trim(),
+        nome:            document.getElementById(`${p}-nome`).value.trim(),
         estabelecimento: document.getElementById(`${p}-estab`).value.trim(),
-        valor:         parseFloat(document.getElementById(`${p}-valor`).value) || 0,
-        data:          document.getElementById(`${p}-data`).value,
-        categoria:     document.getElementById(`${p}-cat`).value,
-        subcategoria:  document.getElementById(`${p}-sub`).value
+        valor:           parseFloat(document.getElementById(`${p}-valor`).value) || 0,
+        data:            document.getElementById(`${p}-data`).value,
+        categoria:       document.getElementById(`${p}-cat`).value,
+        subcategoria:    document.getElementById(`${p}-sub`).value
     };
 
     if (!tx.nome)  { toast('Informe um nome/descrição', 'err'); return; }
