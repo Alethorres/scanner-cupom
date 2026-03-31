@@ -32,202 +32,49 @@
             overflow-x: hidden;
         }
 
-        /* ── SCREENS ── */
-        .screen {
-            display: none;
-            flex-direction: column;
-            min-height: 100svh;
-            padding: 56px 20px 36px;
-        }
+        .screen { display: none; flex-direction: column; min-height: 100svh; padding: 56px 20px 36px; }
         .screen.active { display: flex; }
 
-        .loading-screen {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100svh;
-            gap: 24px;
-            padding: 24px;
-            text-align: center;
-        }
+        .loading-screen { display: none; flex-direction: column; align-items: center; justify-content: center; min-height: 100svh; gap: 24px; padding: 24px; text-align: center; }
         .loading-screen.active { display: flex; }
 
-        /* ── HEADER ── */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 32px;
-        }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 32px; }
         .logo { font-size: 20px; font-weight: 800; letter-spacing: -0.5px; }
         .logo span { color: var(--accent); }
 
-        .btn-icon {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            color: var(--text);
-            width: 40px; height: 40px;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .btn-back {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 10px 14px;
-            border-radius: 10px;
-            font-family: 'Syne', sans-serif;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-        }
+        .btn-icon { background: var(--surface); border: 1px solid var(--border); color: var(--text); width: 40px; height: 40px; border-radius: 10px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .btn-back { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); padding: 10px 14px; border-radius: 10px; font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 600; cursor: pointer; }
 
-        /* ── TOTAL CARD ── */
-        .total-card {
-            background: var(--accent);
-            color: #0a0a0a;
-            border-radius: 24px;
-            padding: 28px 24px;
-            margin-bottom: 20px;
-            position: relative;
-            overflow: hidden;
-        }
-        .total-card::before {
-            content: '';
-            position: absolute;
-            top: -40px; right: -40px;
-            width: 140px; height: 140px;
-            background: rgba(0,0,0,0.06);
-            border-radius: 50%;
-        }
-        .total-label {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            opacity: 0.65;
-            margin-bottom: 6px;
-        }
-        .total-value {
-            font-family: 'DM Mono', monospace;
-            font-size: 40px;
-            font-weight: 500;
-            letter-spacing: -1px;
-            line-height: 1;
-        }
+        .total-card { background: var(--accent); color: #0a0a0a; border-radius: 24px; padding: 28px 24px; margin-bottom: 20px; position: relative; overflow: hidden; }
+        .total-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 140px; height: 140px; background: rgba(0,0,0,0.06); border-radius: 50%; }
+        .total-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; opacity: 0.65; margin-bottom: 6px; }
+        .total-value { font-family: 'DM Mono', monospace; font-size: 40px; font-weight: 500; letter-spacing: -1px; line-height: 1; }
         .total-month { font-size: 12px; opacity: 0.55; margin-top: 6px; }
 
-        /* ── BUTTONS ── */
-        .btn-primary {
-            background: var(--accent);
-            color: #0a0a0a;
-            border: none;
-            border-radius: var(--radius);
-            padding: 18px 24px;
-            font-family: 'Syne', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            width: 100%;
-            display: flex; align-items: center; justify-content: center;
-            gap: 10px;
-            transition: transform 0.12s, opacity 0.12s;
-            -webkit-appearance: none;
-            letter-spacing: 0.2px;
-        }
+        .btn-primary { background: var(--accent); color: #0a0a0a; border: none; border-radius: var(--radius); padding: 18px 24px; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.12s, opacity 0.12s; -webkit-appearance: none; letter-spacing: 0.2px; }
         .btn-primary:active { transform: scale(0.97); opacity: 0.88; }
         .btn-primary:disabled { opacity: 0.35; }
 
-        .btn-secondary {
-            background: var(--surface);
-            color: var(--text);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 16px 24px;
-            font-family: 'Syne', sans-serif;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            display: flex; align-items: center; justify-content: center;
-            gap: 10px;
-            transition: transform 0.12s;
-            -webkit-appearance: none;
-        }
+        .btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 24px; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; transition: transform 0.12s; -webkit-appearance: none; }
         .btn-secondary:active { transform: scale(0.97); }
-
         .btn-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 
-        /* ── TRANSACTIONS ── */
-        .section-title {
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 14px;
-        }
+        .section-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
         .tx-list { display: flex; flex-direction: column; gap: 8px; flex: 1; overflow-y: auto; }
 
-        .tx-item {
-            background: var(--surface);
-            border-radius: 14px;
-            padding: 14px 16px;
-            display: flex; align-items: center; gap: 14px;
-            border: 1px solid var(--border);
-            animation: fadeUp 0.25s ease both;
-        }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(8px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
+        .tx-item { background: var(--surface); border-radius: 14px; padding: 14px 16px; display: flex; align-items: center; gap: 14px; border: 1px solid var(--border); animation: fadeUp 0.25s ease both; }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-        .tx-emoji {
-            width: 38px; height: 38px;
-            background: var(--accent-dim);
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 17px;
-            flex-shrink: 0;
-        }
+        .tx-emoji { width: 38px; height: 38px; background: var(--accent-dim); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
         .tx-info { flex: 1; min-width: 0; }
-        .tx-name {
-            font-size: 14px; font-weight: 600;
-            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-        }
+        .tx-name { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .tx-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
         .tx-right { text-align: right; flex-shrink: 0; }
-        .tx-val {
-            font-family: 'DM Mono', monospace;
-            font-size: 14px; font-weight: 500;
-            color: var(--red);
-        }
-        .tx-date {
-            font-family: 'DM Mono', monospace;
-            font-size: 11px; color: var(--text-muted); margin-top: 2px;
-        }
+        .tx-val { font-family: 'DM Mono', monospace; font-size: 14px; font-weight: 500; color: var(--red); }
+        .tx-date { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+        .empty-state { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 14px; }
 
-        .empty-state {
-            text-align: center; padding: 40px 0;
-            color: var(--text-muted); font-size: 14px;
-        }
-
-        /* ── UPLOAD ZONE ── */
-        .upload-zone {
-            background: var(--surface);
-            border: 2px dashed var(--border);
-            border-radius: 20px;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            padding: 52px 24px; gap: 12px;
-            cursor: pointer;
-            transition: border-color 0.2s;
-            margin-bottom: 24px;
-            min-height: 220px;
-        }
+        .upload-zone { background: var(--surface); border: 2px dashed var(--border); border-radius: 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 52px 24px; gap: 12px; cursor: pointer; transition: border-color 0.2s; margin-bottom: 24px; min-height: 220px; }
         .upload-zone.filled { padding: 0; border-style: solid; border-color: var(--accent); overflow: hidden; }
         .upload-zone img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 18px; }
         .upload-icon { font-size: 44px; }
@@ -235,186 +82,88 @@
         .upload-hint { font-size: 12px; color: var(--text-muted); }
         #fileInput { display: none; }
 
-        /* ── LOADING ── */
-        .spinner {
-            width: 56px; height: 56px;
-            border: 3px solid var(--border);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 0.75s linear infinite;
-        }
+        .spinner { width: 56px; height: 56px; border: 3px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 0.75s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .loading-title { font-size: 20px; font-weight: 700; }
         .loading-sub { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-        /* ── FORMS ── */
         .form-scroll { overflow-y: auto; flex: 1; padding-bottom: 8px; }
         .form-group { margin-bottom: 14px; }
-        .form-label {
-            font-size: 10px; font-weight: 700;
-            letter-spacing: 1.5px; text-transform: uppercase;
-            color: var(--text-muted); display: block; margin-bottom: 7px;
-        }
-        .form-input, .form-select {
-            width: 100%;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 13px 15px;
-            font-family: 'Syne', sans-serif;
-            font-size: 15px;
-            color: var(--text);
-            -webkit-appearance: none;
-            outline: none;
-            transition: border-color 0.15s;
-        }
+        .form-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 7px; }
+        .form-input, .form-select { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; font-family: 'Syne', sans-serif; font-size: 15px; color: var(--text); -webkit-appearance: none; outline: none; transition: border-color 0.15s; }
         .form-input:focus, .form-select:focus { border-color: var(--accent); }
         .form-input.mono { font-family: 'DM Mono', monospace; }
-        .form-select {
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7a7a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 14px center;
-        }
+        .form-select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7a7a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
         .form-select option { background: #1e1e1e; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 
-        /* ── SUCCESS ── */
-        .success-icon {
-            width: 90px; height: 90px;
-            background: var(--accent-dim);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 44px;
-            margin: 0 auto 24px;
-            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-        }
-        @keyframes popIn {
-            from { transform: scale(0); opacity: 0; }
-            to   { transform: scale(1); opacity: 1; }
-        }
+        .success-icon { width: 90px; height: 90px; background: var(--accent-dim); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 44px; margin: 0 auto 24px; animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both; }
+        @keyframes popIn { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         .success-title { font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 8px; }
         .success-sub { font-size: 14px; color: var(--text-muted); text-align: center; margin-bottom: 40px; line-height: 1.6; }
 
-        /* ── CONFIG ── */
-        .config-note {
-            background: var(--surface);
-            border-left: 3px solid var(--accent);
-            border-radius: 0 10px 10px 0;
-            padding: 14px 16px;
-            font-size: 13px;
-            color: var(--text-muted);
-            margin-bottom: 14px;
-            line-height: 1.6;
-        }
+        .config-note { background: var(--surface); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 16px; font-size: 13px; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
         .config-note strong { color: var(--text); display: block; margin-bottom: 2px; }
 
-        /* ── TOAST ── */
-        .toast {
-            position: fixed; bottom: 36px; left: 50%;
-            transform: translateX(-50%) translateY(80px);
-            background: var(--surface2);
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 12px 20px;
-            border-radius: 12px;
-            font-size: 13px; font-weight: 600;
-            white-space: nowrap;
-            transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
-            z-index: 999;
-            max-width: 90vw;
-            white-space: normal;
-            text-align: center;
-        }
+        .toast { position: fixed; bottom: 36px; left: 50%; transform: translateX(-50%) translateY(80px); background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 12px 20px; border-radius: 12px; font-size: 13px; font-weight: 600; transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1); z-index: 999; max-width: 90vw; white-space: normal; text-align: center; }
         .toast.show { transform: translateX(-50%) translateY(0); }
         .toast.err { border-color: var(--red); color: var(--red); }
         .toast.ok  { border-color: var(--accent); color: var(--accent); }
-
-        /* ── SAFE AREA ── */
-        .safe-bottom { height: env(safe-area-inset-bottom, 0px); }
     </style>
 </head>
 <body>
 
-<!-- ════════════════════════════════════════
-     HOME
-════════════════════════════════════════ -->
 <div class="screen active" id="s-home">
     <div class="header">
         <div class="logo">fin<span>·</span>scan</div>
         <button class="btn-icon" onclick="show('s-config')">⚙️</button>
     </div>
-
     <div class="total-card">
         <div class="total-label">Total do mês</div>
         <div class="total-value" id="totalVal">R$ 0,00</div>
         <div class="total-month" id="totalMonth"></div>
     </div>
-
     <div class="btn-group">
-        <button class="btn-primary" onclick="show('s-camera')">
-            📷 Escanear Cupom
-        </button>
-        <button class="btn-secondary" onclick="openManual()">
-            ✏️ Entrada Manual
-        </button>
+        <button class="btn-primary" onclick="show('s-camera')">📷 Escanear Cupom</button>
+        <button class="btn-secondary" onclick="openManual()">✏️ Entrada Manual</button>
     </div>
-
     <div class="section-title">Últimas entradas</div>
     <div class="tx-list" id="txList">
         <div class="empty-state">Nenhuma transação ainda</div>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     CAMERA
-════════════════════════════════════════ -->
 <div class="screen" id="s-camera">
     <div class="header">
         <button class="btn-back" onclick="show('s-home')">← Voltar</button>
         <div class="logo">fin<span>·</span>scan</div>
     </div>
-
     <h2 style="font-size:22px;font-weight:800;margin-bottom:6px">Escanear Cupom</h2>
-    <p style="color:var(--text-muted);font-size:13px;margin-bottom:24px;line-height:1.5">
-        Fotografe ou selecione uma imagem do cupom fiscal para extrair os dados automaticamente.
-    </p>
-
+    <p style="color:var(--text-muted);font-size:13px;margin-bottom:24px;line-height:1.5">Fotografe ou selecione uma imagem do cupom fiscal para extrair os dados automaticamente.</p>
     <div class="upload-zone" id="uploadZone" onclick="document.getElementById('fileInput').click()">
         <div class="upload-icon">📸</div>
         <div class="upload-text">Toque para capturar</div>
         <div class="upload-hint">Câmera ou galeria</div>
     </div>
     <input type="file" id="fileInput" accept="image/*" capture="environment">
-
     <div class="btn-group">
-        <button class="btn-primary" id="btnAnalyze" onclick="analyzeImage()" disabled>
-            🔍 Analisar com IA
-        </button>
+        <button class="btn-primary" id="btnAnalyze" onclick="analyzeImage()" disabled>🔍 Analisar com IA</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     LOADING
-════════════════════════════════════════ -->
 <div class="loading-screen" id="s-loading">
     <div class="spinner"></div>
     <div class="loading-title">Analisando...</div>
     <div class="loading-sub">A IA está lendo o cupom.<br>Aguarde alguns segundos.</div>
 </div>
 
-<!-- ════════════════════════════════════════
-     REVIEW (dados extraídos)
-════════════════════════════════════════ -->
 <div class="screen" id="s-review">
     <div class="header">
         <button class="btn-back" onclick="show('s-camera')">← Voltar</button>
         <div class="logo">fin<span>·</span>scan</div>
     </div>
-
     <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Revisar dados</h2>
     <p style="color:var(--text-muted);font-size:13px;margin-bottom:20px">Confirme ou edite antes de salvar</p>
-
     <div class="form-scroll">
         <div class="form-group">
             <label class="form-label">Nome / Descrição</label>
@@ -438,39 +187,28 @@
             <label class="form-label">Categoria</label>
             <select class="form-select" id="r-cat" onchange="updateSub('r-cat','r-sub')">
                 <option value="">Selecionar...</option>
-                <option>Alimentação</option><option>Transporte</option>
-                <option>Moradia</option><option>Saúde</option>
-                <option>Lazer</option><option>Educação</option>
+                <option>Alimentação</option><option>Transporte</option><option>Moradia</option>
+                <option>Saúde</option><option>Lazer</option><option>Educação</option>
                 <option>Vestuário</option><option>Serviços</option><option>Outros</option>
             </select>
         </div>
         <div class="form-group">
             <label class="form-label">Subcategoria</label>
-            <select class="form-select" id="r-sub">
-                <option value="">Selecione a categoria primeiro</option>
-            </select>
+            <select class="form-select" id="r-sub"><option value="">Selecione a categoria primeiro</option></select>
         </div>
     </div>
-
     <div style="padding-top:16px">
-        <button class="btn-primary" onclick="saveData('review')">
-            💾 Salvar no Notion
-        </button>
+        <button class="btn-primary" onclick="saveData('review')">💾 Salvar no Notion</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     MANUAL
-════════════════════════════════════════ -->
 <div class="screen" id="s-manual">
     <div class="header">
         <button class="btn-back" onclick="show('s-home')">← Voltar</button>
         <div class="logo">fin<span>·</span>scan</div>
     </div>
-
     <h2 style="font-size:22px;font-weight:800;margin-bottom:4px">Entrada Manual</h2>
     <p style="color:var(--text-muted);font-size:13px;margin-bottom:20px">Registre uma despesa sem cupom</p>
-
     <div class="form-scroll">
         <div class="form-group">
             <label class="form-label">Nome / Descrição</label>
@@ -494,52 +232,35 @@
             <label class="form-label">Categoria</label>
             <select class="form-select" id="m-cat" onchange="updateSub('m-cat','m-sub')">
                 <option value="">Selecionar...</option>
-                <option>Alimentação</option><option>Transporte</option>
-                <option>Moradia</option><option>Saúde</option>
-                <option>Lazer</option><option>Educação</option>
+                <option>Alimentação</option><option>Transporte</option><option>Moradia</option>
+                <option>Saúde</option><option>Lazer</option><option>Educação</option>
                 <option>Vestuário</option><option>Serviços</option><option>Outros</option>
             </select>
         </div>
         <div class="form-group">
             <label class="form-label">Subcategoria</label>
-            <select class="form-select" id="m-sub">
-                <option value="">Selecione a categoria primeiro</option>
-            </select>
+            <select class="form-select" id="m-sub"><option value="">Selecione a categoria primeiro</option></select>
         </div>
     </div>
-
     <div style="padding-top:16px">
-        <button class="btn-primary" onclick="saveData('manual')">
-            💾 Salvar no Notion
-        </button>
+        <button class="btn-primary" onclick="saveData('manual')">💾 Salvar no Notion</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     SUCCESS
-════════════════════════════════════════ -->
 <div class="screen" id="s-success">
     <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center">
         <div class="success-icon">✅</div>
         <div class="success-title">Salvo no Notion!</div>
-        <div class="success-sub">
-            Transação registrada<br>com sucesso.
-        </div>
-        <button class="btn-primary" onclick="goHome()" style="max-width:280px">
-            ＋ Registrar outra
-        </button>
+        <div class="success-sub">Transação registrada<br>com sucesso.</div>
+        <button class="btn-primary" onclick="goHome()" style="max-width:280px">＋ Registrar outra</button>
     </div>
 </div>
 
-<!-- ════════════════════════════════════════
-     CONFIG
-════════════════════════════════════════ -->
 <div class="screen" id="s-config">
     <div class="header">
         <button class="btn-back" onclick="show('s-home')">← Voltar</button>
         <div class="logo">Configurações</div>
     </div>
-
     <div class="form-scroll">
         <div class="config-note">
             <strong>🔗 Webhook — Salvar no Notion</strong>
@@ -549,40 +270,23 @@
             <label class="form-label">URL Webhook (Salvar)</label>
             <input type="url" class="form-input" id="cfg-save" placeholder="https://hook.eu2.make.com/...">
         </div>
-
         <div class="config-note" style="margin-top:4px">
-            <strong>🤖 Webhook — Extrair com Claude (Make)</strong>
-            Se configurado, o Make chama o Claude e retorna os dados extraídos. Caso contrário, use a API key abaixo para extração local.
-        </div>
-        <div class="form-group">
-            <label class="form-label">URL Webhook (Extrair)</label>
-            <input type="url" class="form-input" id="cfg-extract" placeholder="https://hook.eu2.make.com/... (opcional)">
-        </div>
-
-        <div class="config-note" style="margin-top:4px">
-            <strong>🔑 API Key Anthropic (extração local)</strong>
-            Alternativa ao webhook de extração. A chave fica apenas no dispositivo (localStorage).
+            <strong>🔑 API Key Anthropic</strong>
+            Usada para escanear cupons diretamente no app. Fica salva apenas neste dispositivo.
         </div>
         <div class="form-group">
             <label class="form-label">Anthropic API Key</label>
             <input type="password" class="form-input" id="cfg-key" placeholder="sk-ant-...">
         </div>
     </div>
-
     <div style="padding-top:16px">
-        <button class="btn-primary" onclick="saveConfig()">
-            💾 Salvar configurações
-        </button>
+        <button class="btn-primary" onclick="saveConfig()">💾 Salvar configurações</button>
     </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
 <script>
-// ══════════════════════════════════════
-//  SUBCATEGORIES
-// ══════════════════════════════════════
 const SUBS = {
     'Alimentação':  ['Supermercado','Restaurante','Lanche','Delivery','Padaria','Feira'],
     'Transporte':   ['Combustível','Uber/99','Ônibus/Metrô','Estacionamento','Manutenção'],
@@ -600,23 +304,16 @@ const EMOJIS = {
     'Lazer':'🎮','Educação':'📚','Vestuário':'👕','Serviços':'🔧','Outros':'📌'
 };
 
-// ══════════════════════════════════════
-//  STATE
-// ══════════════════════════════════════
-let cfg = { save: '', extract: '', key: '' };
+let cfg = { save: '', key: '' };
 let txs = [];
 let imgB64 = null, imgMime = null;
 
-// ══════════════════════════════════════
-//  INIT
-// ══════════════════════════════════════
 (function init() {
     try { cfg = { ...cfg, ...JSON.parse(localStorage.getItem('fsc_cfg') || '{}') }; } catch(e){}
     try { txs = JSON.parse(localStorage.getItem('fsc_txs') || '[]'); } catch(e){}
 
-    document.getElementById('cfg-save').value    = cfg.save    || '';
-    document.getElementById('cfg-extract').value = cfg.extract || '';
-    document.getElementById('cfg-key').value     = cfg.key     || '';
+    document.getElementById('cfg-save').value = cfg.save || '';
+    document.getElementById('cfg-key').value  = cfg.key  || '';
 
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('r-data').value = today;
@@ -631,9 +328,6 @@ let imgB64 = null, imgMime = null;
     document.getElementById('fileInput').addEventListener('change', onFile);
 })();
 
-// ══════════════════════════════════════
-//  NAVIGATION
-// ══════════════════════════════════════
 function show(id) {
     document.querySelectorAll('.screen, .loading-screen').forEach(s => s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
@@ -658,21 +352,14 @@ function goHome() {
     show('s-home');
 }
 
-// ══════════════════════════════════════
-//  CONFIG
-// ══════════════════════════════════════
 function saveConfig() {
-    cfg.save    = document.getElementById('cfg-save').value.trim();
-    cfg.extract = document.getElementById('cfg-extract').value.trim();
-    cfg.key     = document.getElementById('cfg-key').value.trim();
+    cfg.save = document.getElementById('cfg-save').value.trim();
+    cfg.key  = document.getElementById('cfg-key').value.trim();
     localStorage.setItem('fsc_cfg', JSON.stringify(cfg));
     toast('Configurações salvas!', 'ok');
     setTimeout(() => show('s-home'), 1000);
 }
 
-// ══════════════════════════════════════
-//  FILE / CAMERA
-// ══════════════════════════════════════
 function onFile(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -689,34 +376,21 @@ function onFile(e) {
     reader.readAsDataURL(file);
 }
 
-// ══════════════════════════════════════
-//  ANALYZE IMAGE
-// ══════════════════════════════════════
 async function analyzeImage() {
     if (!imgB64) return;
+    if (!cfg.key) {
+        toast('Configure a API Key em ⚙️ Configurações', 'err');
+        return;
+    }
     show('s-loading');
     try {
-        let data;
-        if (cfg.extract) {
-            const r = await fetch(cfg.extract, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ mode: 'extract', image: imgB64, mimeType: imgMime })
-            });
-            data = await r.json();
-        } else if (cfg.key) {
-            data = await extractLocal();
-        } else {
-            show('s-camera');
-            toast('Configure um webhook ou API key em ⚙️ Configurações', 'err');
-            return;
-        }
+        const data = await extractLocal();
         fillReview(data);
         show('s-review');
     } catch(err) {
         console.error(err);
         show('s-camera');
-        toast('Erro ao analisar. Verifique a configuração.', 'err');
+        toast('Erro: ' + (err.message || 'Verifique a API key'), 'err');
     }
 }
 
@@ -752,9 +426,15 @@ Se não encontrar um campo, use null.`;
             }]
         })
     });
+
     const res = await r.json();
-    const txt = res.content[0].text.replace(/```json|```/g, '').trim();
-    return JSON.parse(txt);
+    if (res.error) throw new Error(res.error.message);
+
+    const raw = res.content[0].text;
+    // Extrai o primeiro bloco JSON mesmo com texto ao redor
+    const match = raw.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('Resposta inesperada da IA');
+    return JSON.parse(match[0]);
 }
 
 function fillReview(d) {
@@ -771,9 +451,7 @@ function fillReview(d) {
     }
 }
 
-// ══════════════════════════════════════
-//  SAVE
-// ══════════════════════════════════════
+// saveData envia APENAS os campos de texto ao Notion — sem imagem
 async function saveData(src) {
     const p = src === 'review' ? 'r' : 'm';
     const tx = {
@@ -787,14 +465,14 @@ async function saveData(src) {
 
     if (!tx.nome)  { toast('Informe um nome/descrição', 'err'); return; }
     if (!tx.valor) { toast('Informe o valor', 'err'); return; }
-    if (!cfg.save) { toast('Configure o webhook de salvar em ⚙️', 'err'); return; }
+    if (!cfg.save) { toast('Configure o webhook em ⚙️', 'err'); return; }
 
     show('s-loading');
     try {
         await fetch(cfg.save, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(tx)
+            body: JSON.stringify(tx)   // apenas dados textuais, sem imagem
         });
         txs.unshift({ ...tx, id: Date.now() });
         localStorage.setItem('fsc_txs', JSON.stringify(txs.slice(0, 60)));
@@ -807,9 +485,6 @@ async function saveData(src) {
     }
 }
 
-// ══════════════════════════════════════
-//  RENDER
-// ══════════════════════════════════════
 function renderTxs() {
     const month = new Date().toISOString().slice(0, 7);
     const total = txs
@@ -845,9 +520,6 @@ function fmtDate(s) {
     return `${d}/${m}`;
 }
 
-// ══════════════════════════════════════
-//  SUBCATEGORIES
-// ══════════════════════════════════════
 function updateSub(catId, subId) {
     const cat = document.getElementById(catId).value;
     const sub = document.getElementById(subId);
@@ -857,9 +529,6 @@ function updateSub(catId, subId) {
         : '<option value="">Selecione a categoria primeiro</option>';
 }
 
-// ══════════════════════════════════════
-//  TOAST
-// ══════════════════════════════════════
 let _tt;
 function toast(msg, type = '') {
     const el = document.getElementById('toast');
